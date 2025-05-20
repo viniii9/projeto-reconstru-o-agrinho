@@ -1,60 +1,66 @@
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { PlayIcon, BookOpenIcon, MessageCircleIcon } from "lucide-react";
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal de Saberes Rurais</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-green-50 text-green-900 min-h-screen">
 
-const HomePage = () => {
-  return (
-    <main className="min-h-screen bg-green-50 p-6">
-      <header className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-green-900 mb-2">
-          Portal de Saberes Rurais
-        </h1>
-        <p className="text-lg text-green-700">
-          Um espaço educativo com vídeos, textos e depoimentos sobre práticas do campo, voltado para o público urbano.
-        </p>
-      </header>
+  <header class="text-center py-10">
+    <h1 class="text-4xl font-bold mb-2">Portal de Saberes Rurais</h1>
+    <p class="text-lg text-green-700">
+      Um espaço educativo com vídeos, textos e depoimentos sobre práticas do campo, voltado para o público urbano.
+    </p>
+  </header>
 
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Card className="bg-white shadow-md rounded-2xl p-4">
-          <CardContent className="flex flex-col items-center">
-            <PlayIcon className="h-10 w-10 text-green-800 mb-4" />
-            <h2 className="text-xl font-semibold text-green-900 mb-2">Vídeos</h2>
-            <p className="text-sm text-green-700 text-center mb-4">
-              Assista a vídeos sobre agricultura sustentável, bioconstrução, permacultura e outros saberes do campo.
-            </p>
-            <Button className="bg-green-700 text-white hover:bg-green-800">Explorar Vídeos</Button>
-          </CardContent>
-        </Card>
+  <main class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 max-w-7xl mx-auto">
+    
+    <!-- Vídeos -->
+    <div class="bg-white shadow-md rounded-2xl p-6 text-center">
+      <div class="flex justify-center mb-4">
+        <div data-lucide="play" class="w-10 h-10 text-green-800"></div>
+      </div>
+      <h2 class="text-xl font-semibold mb-2">Vídeos</h2>
+      <p class="text-green-700 mb-4 text-sm">
+        Assista a vídeos sobre agricultura sustentável, bioconstrução, permacultura e outros saberes do campo.
+      </p>
+      <button class="bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded-xl">Explorar Vídeos</button>
+    </div>
 
-        <Card className="bg-white shadow-md rounded-2xl p-4">
-          <CardContent className="flex flex-col items-center">
-            <BookOpenIcon className="h-10 w-10 text-green-800 mb-4" />
-            <h2 className="text-xl font-semibold text-green-900 mb-2">Textos</h2>
-            <p className="text-sm text-green-700 text-center mb-4">
-              Leia artigos, receitas tradicionais, técnicas e conhecimentos passados de geração em geração.
-            </p>
-            <Button className="bg-green-700 text-white hover:bg-green-800">Ler Textos</Button>
-          </CardContent>
-        </Card>
+    <!-- Textos -->
+    <div class="bg-white shadow-md rounded-2xl p-6 text-center">
+      <div class="flex justify-center mb-4">
+        <div data-lucide="book-open" class="w-10 h-10 text-green-800"></div>
+      </div>
+      <h2 class="text-xl font-semibold mb-2">Textos</h2>
+      <p class="text-green-700 mb-4 text-sm">
+        Leia artigos, receitas tradicionais, técnicas e conhecimentos passados de geração em geração.
+      </p>
+      <button class="bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded-xl">Ler Textos</button>
+    </div>
 
-        <Card className="bg-white shadow-md rounded-2xl p-4">
-          <CardContent className="flex flex-col items-center">
-            <MessageCircleIcon className="h-10 w-10 text-green-800 mb-4" />
-            <h2 className="text-xl font-semibold text-green-900 mb-2">Depoimentos</h2>
-            <p className="text-sm text-green-700 text-center mb-4">
-              Conheça histórias de quem vive no campo e compartilha suas experiências com quem vive na cidade.
-            </p>
-            <Button className="bg-green-700 text-white hover:bg-green-800">Ver Depoimentos</Button>
-          </CardContent>
-        </Card>
-      </section>
+    <!-- Depoimentos -->
+    <div class="bg-white shadow-md rounded-2xl p-6 text-center">
+      <div class="flex justify-center mb-4">
+        <div data-lucide="message-circle" class="w-10 h-10 text-green-800"></div>
+      </div>
+      <h2 class="text-xl font-semibold mb-2">Depoimentos</h2>
+      <p class="text-green-700 mb-4 text-sm">
+        Conheça histórias de quem vive no campo e compartilha suas experiências com quem vive na cidade.
+      </p>
+      <button class="bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded-xl">Ver Depoimentos</button>
+    </div>
+  </main>
 
-      <footer className="mt-12 text-center text-green-600 text-sm">
-        © 2025 Portal de Saberes Rurais. Todos os direitos reservados.
-      </footer>
-    </main>
-  );
-};
+  <footer class="text-center text-green-600 text-sm mt-12 py-6">
+    © 2025 Portal de Saberes Rurais. Todos os direitos reservados.
+  </footer>
 
-export default HomePage;
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
