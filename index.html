@@ -1,66 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portal de Saberes Rurais</title>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-green-50 text-green-900 min-h-screen">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4e8;
+      color: #2f3e2f;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
 
-  <header class="text-center py-10">
-    <h1 class="text-4xl font-bold mb-2">Portal de Saberes Rurais</h1>
-    <p class="text-lg text-green-700">
-      Um espaço educativo com vídeos, textos e depoimentos sobre práticas do campo, voltado para o público urbano.
-    </p>
+    header {
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #2f4f2f;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 2rem auto;
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      padding: 1rem;
+      width: 300px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .card h2 {
+      color: #365c3b;
+      margin-top: 1rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .card button {
+      background-color: #365c3b;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 1rem;
+      background-color: #e6e6d6;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Portal de Saberes Rurais</h1>
+    <p>Um espaço educativo com vídeos, textos e depoimentos sobre práticas do campo, voltado para o público urbano.</p>
   </header>
 
-  <main class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 max-w-7xl mx-auto">
-    
-    <!-- Vídeos -->
-    <div class="bg-white shadow-md rounded-2xl p-6 text-center">
-      <div class="flex justify-center mb-4">
-        <div data-lucide="play" class="w-10 h-10 text-green-800"></div>
-      </div>
-      <h2 class="text-xl font-semibold mb-2">Vídeos</h2>
-      <p class="text-green-700 mb-4 text-sm">
-        Assista a vídeos sobre agricultura sustentável, bioconstrução, permacultura e outros saberes do campo.
-      </p>
-      <button class="bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded-xl">Explorar Vídeos</button>
+  <div class="grid">
+    <!-- Seção Vídeos -->
+    <div class="card">
+      <img src="casa-rural.jpg" alt="Cabana rural de madeira">
+      <h2>Vídeos</h2>
+      <p>Assista a vídeos sobre agricultura sustentável, bioconstrução, permacultura e outros saberes do campo.</p>
+      <button>Explorar Vídeos</button>
     </div>
 
-    <!-- Textos -->
-    <div class="bg-white shadow-md rounded-2xl p-6 text-center">
-      <div class="flex justify-center mb-4">
-        <div data-lucide="book-open" class="w-10 h-10 text-green-800"></div>
-      </div>
-      <h2 class="text-xl font-semibold mb-2">Textos</h2>
-      <p class="text-green-700 mb-4 text-sm">
-        Leia artigos, receitas tradicionais, técnicas e conhecimentos passados de geração em geração.
-      </p>
-      <button class="bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded-xl">Ler Textos</button>
+    <!-- Seção Textos -->
+    <div class="card">
+      <img src="livro-na-roça.jpg" alt="Livro com vegetais">
+      <h2>Textos</h2>
+      <p>Leia artigos, receitas tradicionais, técnicas e conhecimentos passados de geração em geração.</p>
+      <button>Ler Textos</button>
     </div>
 
-    <!-- Depoimentos -->
-    <div class="bg-white shadow-md rounded-2xl p-6 text-center">
-      <div class="flex justify-center mb-4">
-        <div data-lucide="message-circle" class="w-10 h-10 text-green-800"></div>
-      </div>
-      <h2 class="text-xl font-semibold mb-2">Depoimentos</h2>
-      <p class="text-green-700 mb-4 text-sm">
-        Conheça histórias de quem vive no campo e compartilha suas experiências com quem vive na cidade.
-      </p>
-      <button class="bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded-xl">Ver Depoimentos</button>
+    <!-- Seção Depoimentos -->
+    <div class="card">
+      <img src="fazendeira.jpg" alt="Jovem agricultora no campo">
+      <h2>Depoimentos</h2>
+      <p>Conheça histórias de quem vive no campo e compartilha suas experiências com quem vive na cidade.</p>
+      <button>Ver Depoimentos</button>
     </div>
-  </main>
+  </div>
 
-  <footer class="text-center text-green-600 text-sm mt-12 py-6">
+  <footer>
     © 2025 Portal de Saberes Rurais. Todos os direitos reservados.
   </footer>
 
-  <script>
-    lucide.createIcons();
-  </script>
 </body>
 </html>
