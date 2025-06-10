@@ -1,121 +1,83 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal de Saberes Rurais</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4e8;
-      color: #2f3e2f;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    header {
-      padding: 2rem 1rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      color: #2f4f2f;
-    }
-
-    p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 2rem auto;
-      gap: 2rem;
-      padding: 0 1rem;
-    }
-
-    .card {
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-      padding: 1rem;
-      width: 300px;
-      text-align: center;
-    }
-
-    .card img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    .card h2 {
-      color: #365c3b;
-      margin-top: 1rem;
-    }
-
-    .card p {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .card button {
-      background-color: #365c3b;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    footer {
-      margin-top: 3rem;
-      padding: 1rem;
-      background-color: #e6e6d6;
-      font-size: 0.9rem;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Agrinho 2025 - Sabores da Terra" />
+  <title>Agrinho 2025 - Sabores da Terra</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header>
-    <h1>Portal de Saberes Rurais</h1>
-    <p>Um espaço educativo com vídeos, textos e depoimentos sobre práticas do campo, voltado para o público urbano.</p>
+    <div class="container">
+      <h1>Agrinho 2025</h1>
+      <p>Sabores da Terra</p>
+      <nav>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#temas">Temas</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <div class="grid">
-    <!-- Seção Vídeos -->
-    <div class="card">
-      <img src="casa-rural.jpg" alt="Cabana rural de madeira">
-      <h2>Vídeos</h2>
-      <p>Assista a vídeos sobre agricultura sustentável, bioconstrução, permacultura e outros saberes do campo.</p>
-      <button>Explorar Vídeos</button>
+  <section id="hero">
+    <div class="container">
+      <h2>Sabores da Terra</h2>
+      <p>Celebrando a diversidade agrícola e cultural do Brasil.</p>
     </div>
+  </section>
 
-    <!-- Seção Textos -->
-    <div class="card">
-      <img src="livro-na-roça.jpg" alt="Livro com vegetais">
-      <h2>Textos</h2>
-      <p>Leia artigos, receitas tradicionais, técnicas e conhecimentos passados de geração em geração.</p>
-      <button>Ler Textos</button>
-    </div>
+  <section id="sobre" class="container">
+    <h2>Sobre o Projeto</h2>
+    <p>
+      O Agrinho 2025 traz como tema "Sabores da Terra", destacando a importância dos alimentos produzidos no campo, a agricultura familiar e o conhecimento das tradições regionais. Uma jornada de aprendizado, cultura e sustentabilidade.
+    </p>
+  </section>
 
-    <!-- Seção Depoimentos -->
-    <div class="card">
-      <img src="fazendeira.jpg" alt="Jovem agricultora no campo">
-      <h2>Depoimentos</h2>
-      <p>Conheça histórias de quem vive no campo e compartilha suas experiências com quem vive na cidade.</p>
-      <button>Ver Depoimentos</button>
+  <section id="temas" class="container">
+    <h2>Temas em Destaque</h2>
+    <ul class="cards">
+      <li>
+        <h3>Agricultura Familiar</h3>
+        <p>Valorização do pequeno produtor e dos produtos locais.</p>
+      </li>
+      <li>
+        <h3>Cultura Alimentar</h3>
+        <p>Sabores típicos do Brasil e sua relação com a terra.</p>
+      </li>
+      <li>
+        <h3>Educação Sustentável</h3>
+        <p>Conscientização sobre práticas agrícolas sustentáveis.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="galeria" class="container">
+    <h2>Galeria de Sabores</h2>
+    <div class="galeria">
+      <img src="img/feira.jpg" alt="Feira de produtos regionais" />
+      <img src="img/frutas.jpg" alt="Frutas típicas brasileiras" />
+      <img src="img/agricultor.jpg" alt="Agricultor colhendo alimentos" />
     </div>
-  </div>
+  </section>
+
+  <section id="contato" class="container">
+    <h2>Fale Conosco</h2>
+    <form>
+      <input type="text" placeholder="Seu nome" required />
+      <input type="email" placeholder="Seu email" required />
+      <textarea placeholder="Mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
 
   <footer>
-    © 2025 Portal de Saberes Rurais. Todos os direitos reservados.
+    <div class="container">
+      <p>&copy; 2025 Agrinho - Sabores da Terra. Todos os direitos reservados.</p>
+    </div>
   </footer>
-
 </body>
 </html>
